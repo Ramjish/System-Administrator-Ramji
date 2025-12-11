@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ramji Sharma — System Administrator</title>
+  <meta name="description" content="Ramji Sharma — System Administrator. Windows & Linux admin, VMware, Azure, AWS, backups, monitoring." />
+  <style>
+    /* ---------- Variables ---------- */
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --muted:#98a1b3;
+      --glass: rgba(255,255,255,0.04);
+      --accent:#0ea5a4; /* teal */
+      --accent-2:#2563eb; /* blue */
+      --glass-2: rgba(255,255,255,0.02);
+      --radius:14px;
+      --maxwidth:1100px;
+      --mono: "Segoe UI", Roboto, Arial, sans-serif;
+    }
+
+    /* ---------- Reset & layout ---------- */
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:var(--mono);background:linear-gradient(180deg,#071026 0%, #0f1724 100%);color:#e6eef6}
+    a{color:var(--accent);text-decoration:none}
+    img{max-width:100%;display:block}
+
+    .wrap{max-width:var(--maxwidth);margin:28px auto;padding:22px}
+    .grid{display:grid;grid-template-columns:1fr 340px;gap:22px}
+
+    /* ---------- Header ---------- */
+    header.card{
+      background:linear-gradient(135deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:var(--radius);
+      padding:18px;display:flex;gap:18px;align-items:center;box-shadow:0 10px 30px rgba(2,6,23,0.7);
+      border:1px solid rgba(255,255,255,0.03);
+    }
+
+    .photo{
+      width:140px;height:140px;border-radius:16px;overflow:hidden;border:2px solid rgba(255,255,255,0.04);flex:0 0 140px;background:linear-gradient(180deg,#082533,#05323a);
+      display:flex;align-items:center;justify-content:center
+    }
+    .photo img{width:100%;height:100%;object-fit:cover}
+
+    .head-info h1{margin:0;font-size:22px;letter-spacing:0.2px}
+    .head-info p.sub{margin:6px 0;color:var(--muted)}
+
+    .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#012; font-weight:700;margin-right:8px;font-size:13px}
+
+    /* ---------- Cards ---------- */
+    .card{background:linear-gradient(180deg,var(--card), #071422);padding:18px;border-radius:12px;border:1px solid var(--glass);}
+    h2{margin:0 0 12px 0;color:#dcefff}
+    p.lead{color:var(--muted);line-height:1.55}
+
+    /* ---------- Skills ---------- */
+    .skills{display:flex;flex-wrap:wrap;gap:8px}
+    .skill{background:rgba(255,255,255,0.03);padding:8px 10px;border-radius:10px;font-size:13px;color:var(--muted)}
+
+    .bars{margin-top:12px}
+    .bar{background:var(--glass-2);height:10px;border-radius:999px;overflow:hidden;margin:10px 0}
+    .bar > i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent-2));}
+
+    /* ---------- Timeline / Jobs ---------- */
+    .timeline{display:flex;flex-direction:column;gap:12px}
+    .job{display:block;padding:12px;border-radius:10px;background:linear-gradient(180deg,rgba(255,255,255,0.01),transparent);border:1px solid rgba(255,255,255,0.02)}
+    .job h3{margin:0;font-size:16px}
+    .meta{color:var(--muted);font-size:13px;margin-top:6px}
+    .job ul{margin:10px 0 0 18px;color:var(--muted)}
+
+    /* ---------- Right column ---------- */
+    aside .card{position:sticky;top:28px}
+    .contact{display:flex;flex-direction:column;gap:8px}
+    .contact a{color:#bfecec}
+
+    table{width:100%;border-collapse:collapse;margin-top:8px}
+    table th, table td{padding:8px;border-bottom:1px dashed rgba(255,255,255,0.03);text-align:left;color:var(--muted);font-size:14px}
+
+    /* ---------- Buttons ---------- */
+    .row{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+    .btn{background:linear-gradient(90deg,var(--accent),var(--accent-2));padding:10px 12px;border-radius:10px;color:#001a1a;font-weight:700;border:none;cursor:pointer}
+    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--muted)}
+
+    /* ---------- Footer ---------- */
+    footer{text-align:center;color:var(--muted);margin-top:18px}
+
+    /* ---------- Small screens ---------- */
+    @media(max-width:980px){.grid{grid-template-columns:1fr}.photo{width:110px;height:110px}.head-info{margin-left:0}}
+
+    /* ---------- micro animations ---------- */
+    .fade-up{opacity:0;transform:translateY(8px);animation:fadeUp .6s ease forwards}
+    @keyframes fadeUp{to{opacity:1;transform:none}}
+
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <!-- HEADER -->
+    <header class="card fade-up" style="display:flex;gap:18px;align-items:center">
+      <div class="photo">
+        <img id="pf" src="photo.jpg" alt="Ramji Sharma">
+      </div>
+      <div class="head-info">
+        <div style="display:flex;align-items:center;gap:10px">
+          <h1>Ramji Sharma</h1>
+          <span class="pill">System Administrator</span>
+        </div>
+        <p class="sub">Windows & Linux • VMware ESXi • Azure • AWS • Backups & Monitoring</p>
+        <p class="sub">📱 +91 70213810066 &nbsp; • &nbsp; ✉ <a href="mailto:ramjish86@gmail.com">ramjish86@gmail.com</a></p>
+        <p class="sub">LinkedIn: <a href="https://www.linkedin.com/in/ramji-sharma-aa762b8b" target="_blank">/in/ramji-sharma-aa762b8b</a></p>
+
+        <div class="row">
+          <button class="btn" onclick="downloadResume()">Download Resume</button>
+          <label class="btn ghost" for="up">Upload Photo</label>
+          <input id="up" type="file" accept="image/*" style="display:none" onchange="preview(event)">
+          <button class="btn ghost" onclick="window.print()">Print</button>
+        </div>
+      </div>
+    </header>
+
+    <div class="grid" style="margin-top:18px">
+      <!-- main -->
+      <main>
+        <section class="card fade-up" style="animation-delay:.05s">
+          <h2>Profile Summary</h2>
+          <p class="lead">System Administrator with 5 years of hands-on experience in system repairs, OS deployments and troubleshooting. Strong background in Windows Server (2008–2022), Linux (Ubuntu, Red Hat), virtualization (VMware ESXi, Hyper-V), cloud (AWS & Azure), monitoring (PRTG), and backup solutions (Veritas). Proven ability to deliver high-quality technical solutions and manage data centre operations.</p>
+        </section>
+
+        <section class="card fade-up" style="margin-top:16px;animation-delay:.1s">
+          <h2>Technical Skills</h2>
+          <div class="skills">
+            <span class="skill">Windows Server 2008–2022</span>
+            <span class="skill">Ubuntu / Red Hat</span>
+            <span class="skill">VMware ESXi & vSphere</span>
+            <span class="skill">Hyper-V</span>
+            <span class="skill">Docker</span>
+            <span class="skill">Azure VMs & AD</span>
+            <span class="skill">AWS EC2, S3, VPC</span>
+            <span class="skill">PRTG Monitoring</span>
+            <span class="skill">Fortinet Firewalls</span>
+            <span class="skill">Veritas Backup</span>
+            <span class="skill">PowerShell & Shell</span>
+          </div>
+
+          <div class="bars">
+            <div style="font-size:13px;color:var(--muted);margin-top:12px">Server Administration</div>
+            <div class="bar"><i style="width:92%"></i></div>
+            <div style="font-size:13px;color:var(--muted)">Virtualization & Cloud</div>
+            <div class="bar"><i style="width:82%"></i></div>
+            <div style="font-size:13px;color:var(--muted)">Scripting & Monitoring</div>
+            <div class="bar"><i style="width:68%"></i></div>
+          </div>
+        </section>
+
+        <section class="card fade-up" style="margin-top:16px;animation-delay:.15s">
+          <h2>Project & Work Experience</h2>
+          <div class="timeline">
+
+            <article class="job">
+              <h3>System Administrator — RCF, Mumbai</h3>
+              <div class="meta">Puthur Infotech Pvt. Ltd. • Apr 2025 – Present</div>
+              <ul>
+                <li>Manage Office 365, Azure AD, Exchange; user/email administration.</li>
+                <li>Windows Server installation (2012–2022), patching, GPOs, DNS & DHCP.</li>
+                <li>VMware ESXi / vSphere & Hyper-V operations; server provisioning & snapshots.</li>
+                <li>Azure & AWS: VMs, IAM, S3, VPC setup; backups and AMI creation.</li>
+                <li>PRTG monitoring for servers, Cisco switches, routers and Fortinet firewalls.</li>
+                <li>Veritas tape management and backup procedures.</li>
+              </ul>
+            </article>
+
+            <article class="job">
+              <h3>System Administrator — Infosys (Contract)</h3>
+              <div class="meta">Spruce IT Pvt. Ltd. • Nov 2024 – Feb 2025</div>
+              <ul>
+                <li>Azure VM & storage management; Azure AD user administration.</li>
+                <li>VMware ESXi host deployment; VM lifecycle and snapshots.</li>
+                <li>Linux administration: yum/rpm, tar/zip, backup & restore, shell scripting.</li>
+              </ul>
+            </article>
+
+            <article class="job">
+              <h3>System Administrator — HDFC Bank</h3>
+              <div class="meta">Vserv Infosystems Pvt. Ltd. • Feb 2023 – Jul 2024</div>
+              <ul>
+                <li>L1/L2 support for Windows & Linux servers; access & incident management.</li>
+                <li>Handled server hardware calls, networking issues, and site-critical applications.</li>
+              </ul>
+            </article>
+
+            <article class="job">
+              <h3>L2 System Engineer — IDFC Bank</h3>
+              <div class="meta">Team Computers Pvt. Ltd. • Jul 2021 – Feb 2023</div>
+            </article>
+
+            <article class="job">
+              <h3>Support Engineer — HDFC Bank</h3>
+              <div class="meta">Techigent Technologies Pvt. Ltd. • Aug 2020 – Jan 2021</div>
+            </article>
+
+            <article class="job">
+              <h3>System Engineer — TISS Mumbai</h3>
+              <div class="meta">Ace Brain System & Software • Apr 2018 – Jun 2020</div>
+            </article>
+
+            <article class="job">
+              <h3>IT Engineer — Dream Machines</h3>
+              <div class="meta">Mar 2016 – Jul 2017</div>
+            </article>
+
+            <article class="job">
+              <h3>IT Engineer — Super Techies</h3>
+              <div class="meta">Aug 2014 – Feb 2016</div>
+            </article>
+
+            <article class="job">
+              <h3>Desktop Support Engineer — Gray Technologies</h3>
+              <div class="meta">Jan 2013 – Jul 2014</div>
+            </article>
+
+          </div>
+        </section>
+
+        <section class="card fade-up" style="margin-top:16px;animation-delay:.18s">
+          <h2>Education & Certifications</h2>
+          <ul>
+            <li>B.A. & M.A. — Dr. Ram Manohar Lohia Avadh University</li>
+            <li>Pursuing MCA — Uttaranchal University</li>
+            <li>AWS Certified Solutions Architect – Associate (W9T0MMELQF411D3W)</li>
+            <li>Microsoft Certified: Azure Administrator Associate (1702FA6DE9297169)</li>
+            <li>Linux Training Certification; DevOps Training Certification; Diploma in Hardware & Networking (TN110444)</li>
+          </ul>
+        </section>
+
+      </main>
+
+      <!-- aside -->
+      <aside>
+        <div class="card fade-up" style="animation-delay:.08s">
+          <h2>Contact</h2>
+          <div class="contact">
+            <div><strong>Phone:</strong> +91 70213810066</div>
+            <div><strong>Email:</strong> <a href="mailto:ramjish86@gmail.com">ramjish86@gmail.com</a></div>
+            <div><strong>Location:</strong> Thane, Maharashtra, India</div>
+            <div><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/ramji-sharma-aa762b8b" target="_blank">ramji-sharma-aa762b8b</a></div>
+          </div>
+
+          <h2 style="margin-top:14px">Quick Facts</h2>
+          <table>
+            <tr><th>Experience</th><td>9 years (5 yrs as SysAdmin)</td></tr>
+            <tr><th>Core</th><td>Server & Network Ops</td></tr>
+            <tr><th>Languages</th><td>English, Hindi</td></tr>
+            <tr><th>Passport</th><td>T4636894</td></tr>
+          </table>
+
+          <div style="margin-top:12px">
+            <a class="btn" href="#" onclick="downloadResume()">Download Resume</a>
+            <a class="btn ghost" href="#contact" style="margin-left:8px">Request Call</a>
+          </div>
+        </div>
+
+        <div class="card fade-up" style="margin-top:16px;animation-delay:.12s">
+          <h2>Tools & Infra</h2>
+          <ul>
+            <li>VMware ESXi 6/7, vSphere</li>
+            <li>Hyper-V, Docker</li>
+            <li>PRTG, Veritas Backup</li>
+            <li>Fortinet Firewalls, Cisco L2/L3</li>
+          </ul>
+        </div>
+
+      </aside>
+    </div>
+
+    <footer>
+      <p>© 2025 Ramji Sharma — System Administrator • Thane, Maharashtra</p>
+    </footer>
+
+  </div>
+
+  <script>
+    // preview uploaded photo locally
+    function preview(e){
+      const f = e.target.files && e.target.files[0];
+      if(!f) return;
+      const url = URL.createObjectURL(f);
+      document.getElementById('pf').src = url;
+    }
+
+    // simple resume download helper (replace resume.pdf with real file)
+    function downloadResume(){
+      const path = 'resume.pdf';
+      const a = document.createElement('a');
+      a.href = path;
+      a.download = 'Ramji-Sharma-Resume.pdf';
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+    }
+
+    // reveal animations
+    document.addEventListener('DOMContentLoaded', ()=>{
+      document.querySelectorAll('.fade-up').forEach((el,i)=>{
+        el.style.animationDelay = (i*80)+'ms';
+      });
+    });
+  </script>
+</body>
+</html>
